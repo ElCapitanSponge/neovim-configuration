@@ -1,6 +1,6 @@
-
+-- TODO: with the primeagen video and see what some of these bindings are for
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Exit the file" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -13,10 +13,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>vwm", function()
     require("vim-with-me").StartVimWithMe()
-end)
+end, { desc = "stat [v]im [w]ith [m]e" })
 vim.keymap.set("n", "<leader>svwm", function()
     require("vim-with-me").StopVimWithMe()
-end)
+end, { desc = "[s]top [v]im [w]ith [m]e" })
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -46,11 +46,11 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/AppData/Local/nvim/lua/sponge/packe
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
-end)
+end, { desc = "Stage changes" })
 
 vim.keymap.set("n", "<leader>ww", function()
     vim.cmd("set wrap!")
-end)
+end, { desc = "[w]ord [w]rap toggle" })
 
-vim.keymap.set("n", "<leader>vs", vim.cmd.vs)
-vim.keymap.set("n", "<leader>sp", vim.cmd.sp)
+vim.keymap.set("n", "<leader>vs", vim.cmd.vs, { desc = "[v]erticle [s]plit" })
+vim.keymap.set("n", "<leader>sp", vim.cmd.sp, { desc = "horizontal [sp]lit" })

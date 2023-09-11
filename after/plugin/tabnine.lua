@@ -1,3 +1,4 @@
+-- TODO: Get tabnine working
 require('tabnine').setup({
     disable_auto_comment=true,
     accept_keymap="<Tab>",
@@ -5,5 +6,5 @@ require('tabnine').setup({
     debounce_ms = 800,
     suggestion_color = {gui = "#808080", cterm = 244},
     exclude_filetypes = {"TelescopePrompt"},
-    log_file_path = "C:/Users/andrewbrunker/AppData/Local/nvim-logs/tabnine.log", -- absolute path to Tabnine log file
+    log_file_path = "~/AppData/Local/nvim-logs/tabnine.log", -- absolute path to Tabnine log file
 })
