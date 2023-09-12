@@ -74,8 +74,7 @@ return require('packer').startup(function(use)
     })
     use({
         "codota/tabnine-nvim",
-        build = "pwsh.exe -file .\\dl_binaries.ps1"
-
+        run = "pwsh.exe -file .\\dl_binaries.ps1"
     })
     use("wakatime/vim-wakatime")
     use("nvim-tree/nvim-web-devicons")
@@ -90,4 +89,5 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     })
     use('lewis6991/gitsigns.nvim')
+    use('ThePrimeagen/vim-with-me')
 end)

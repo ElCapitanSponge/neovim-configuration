@@ -33,10 +33,3 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
-function tabine_build_path()
-    if vim.loop.os_uname().sysname == "Windows_NT" then
-        return "pwsh.exe -file .\\dl_binaries.ps1"
-    else
-        return "./dl_binaries.sh"
-    end
-end

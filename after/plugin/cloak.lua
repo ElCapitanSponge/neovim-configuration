@@ -1,4 +1,6 @@
-require("cloak").setup({
+local cloak = require("cloak")
+
+cloak.setup({
   enabled = true,
   cloak_character = "*",
   -- The applied highlight group (colors) on the cloaking, see `:h highlight`.
@@ -8,7 +10,7 @@ require("cloak").setup({
       -- Match any file starting with ".env".
       -- This can be a table to match multiple file patterns.
       file_pattern = {
-          -- ".env*",
+          ".env*",
           "wrangler.toml",
           ".dev.vars",
       },
@@ -19,3 +21,7 @@ require("cloak").setup({
     },
   },
 })
+
+vim.keymap.set("n", "<leader>ct", function()
+    vim.cmd("CloakToggle")
+end, { desc = "[c]loak [t]oggle" })

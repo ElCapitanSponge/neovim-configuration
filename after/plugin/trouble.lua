@@ -1,4 +1,3 @@
--- TODO: Look into how this plugin works
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
   {
       silent = true,
