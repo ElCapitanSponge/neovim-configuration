@@ -1,8 +1,5 @@
-local tabnine = require("tabnine")
-local tabnineStatus = require("tabnine.status")
-local tabnineChat = require("tabnine.chat")
 
-tabnine.setup({
+require("tabnine").setup({
     disable_auto_comment=true,
     accept_keymap="<Tab>",
     dismiss_keymap = "<C-]>",
@@ -12,23 +9,10 @@ tabnine.setup({
     log_file_path = nil, -- absolute path to Tabnine log file
 })
 
-tabnineStatus.status()
-
-tabnineChat.setup()
+require("tabnine.status").status()
 
 vim.keymap.set("n", '<leader>tc', '', {
     noremap = true,
-    callback = tabnineChat.open,
+    callback = require("tabnine.chat").open,
     desc = "[t]abnine [c]hat"
 })
-vim.keymap.set("i", '<leader>tc', '', {
-    noremap = true,
-    callback = tabnineChat.open,
-    desc = "[t]abnine [c]hat"
-})
-vim.keymap.set("x", '<leader>tc', '', {
-    noremap = true,
-    callback = tabnineChat.open,
-    desc = "[t]abnine [c]hat"
-})
-
