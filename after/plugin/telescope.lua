@@ -6,9 +6,7 @@ require('telescope').setup {
     extensions = {
         project = {
             base_dirs = {
-                '~/Documents/sources/iris-v2/',
-                '~/Documents/sources/iris-api/',
-                '~/Documents/sources/iris/',
+                '~/Documents/sources/',
             }
         }
     }
@@ -23,3 +21,7 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = "Serch the files in the
 vim.keymap.set('n', '<leader>of', builtin.oldfiles, { desc = 'Find recently [o]pened [f]iles' })
 vim.keymap.set('n', '<leader>ld', builtin.lsp_definitions, { desc = "[l]sp [d]effinitions" })
 vim.keymap.set('n', '<leader>tk', builtin.keymaps, { desc = "[t]elescope [k]eymaps" })
+
+vim.keymap.set('n', '<leader>tp', function()
+    vim.cmd("Telescope project")
+end, { desc = "[t]elescope [p]rojects" })
