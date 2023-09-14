@@ -1,3 +1,21 @@
+
+require('telescope').setup {
+    defaults = {
+        path_display = { "smart" }
+    },
+    extensions = {
+        project = {
+            base_dirs = {
+                '~/Documents/sources/iris-v2/',
+                '~/Documents/sources/iris-api/',
+                '~/Documents/sources/iris/',
+            }
+        }
+    }
+}
+
+require('telescope').load_extension('project')
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "[f]ind [f]iles search" })
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, { desc = "[l]ive [g]rep" })
