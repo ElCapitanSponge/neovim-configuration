@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme caret')
         end
     })
+    use('folke/tokyonight.nvim')
     use({
         "folke/trouble.nvim",
         config = function()

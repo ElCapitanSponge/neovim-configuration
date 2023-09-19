@@ -1,18 +1,21 @@
 -- NOTE: Color scheme configurations
 require('rose-pine').setup({
-    disable_background = false
+    disable_background = true
 })
 
-require('caret').setup({
-    -- disable_background = true
+require('caret').setup()
+
+require('tokyonight').setup({
+    transparent = true
 })
 
 -- INFO: Variables for tracking theme and color schemes
 SelectedColorIndex = 1
-ScemeCollectionSize = 2
+ScemeCollectionSize = 3
 SchemeCollection = {
     'rose-pine',
-    'caret'
+    'caret',
+    'tokyonight'
 }
 TransBackground = true
 
@@ -20,13 +23,11 @@ TransBackground = true
 function ColorMyPencils(color)
     color = color or "rose-pine"
     vim.cmd.colorscheme(color)
-
     if TransBackground then
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     else
-        vim.api.nvim_set_hl(1, "Normal", {})
-        vim.api.nvim_set_hl(1, "NormalFloat", {})
+        vim.cmd("set background=dark")
     end
 end
 
