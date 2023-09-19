@@ -22,6 +22,13 @@ return require('packer').startup(function(use)
         end
     })
     use({
+        'projekt0n/caret.nvim',
+        as = 'caret',
+        config = function()
+            vim.cmd('colorscheme caret')
+        end
+    })
+    use({
         "folke/trouble.nvim",
         config = function()
             require("trouble").setup {
