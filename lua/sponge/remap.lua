@@ -53,3 +53,7 @@ end, { desc = "[w]ord [w]rap toggle" })
 
 vim.keymap.set("n", "<leader>vs", vim.cmd.vs, { desc = "[v]erticle [s]plit" })
 vim.keymap.set("n", "<leader>sp", vim.cmd.sp, { desc = "horizontal [sp]lit" })
+vim.keymap.set("n", "<leader>t", vim.cmd.tabnew, { desc = "New [t]ab" })
+vim.keymap.set("n", "<leader>nt", vim.cmd.tabn, { desc = "[n]ext [t]ab" })
+vim.keymap.set("n", "<leader>pt", vim.cmd.tabp, { desc = "[p]revious [t]ab" })
+vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose, { desc = "[t]ab [c]lose" })

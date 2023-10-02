@@ -13,15 +13,15 @@ require('tokyonight').setup({
 SelectedColorIndex = 1
 ScemeCollectionSize = 3
 SchemeCollection = {
+    'tokyonight',
     'rose-pine',
     'caret',
-    'tokyonight'
 }
 TransBackground = true
 
 -- INFO: Color my theme
 function ColorMyPencils(color)
-    color = color or "rose-pine"
+    color = color or "tokyonight"
     vim.cmd.colorscheme(color)
     if TransBackground then
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
