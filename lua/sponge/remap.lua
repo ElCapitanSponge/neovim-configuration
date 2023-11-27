@@ -38,7 +38,8 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[s]earch buffer" })
+vim.keymap.set("v", "<leader>s", [[hy:%s/<C-r>/<C-r>/gc<left><left><left>]], { desc = "[s]earch visual buffer" })
+vim.keymap.set("n", "<leader>s", [[hy:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], { desc = "[s]earch buffer" })
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "chmod  e[x]ecutable add" })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/AppData/Local/nvim/lua/sponge/packer.lua<CR>", { desc = "Edit the packer extensions file" });
@@ -57,3 +58,4 @@ vim.keymap.set("n", "<leader>t", vim.cmd.tabnew, { desc = "New [t]ab" })
 vim.keymap.set("n", "<leader>nt", vim.cmd.tabn, { desc = "[n]ext [t]ab" })
 vim.keymap.set("n", "<leader>pt", vim.cmd.tabp, { desc = "[p]revious [t]ab" })
 vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose, { desc = "[t]ab [c]lose" })
+vim.keymap.set("n", "<leader>mr", vim.lsp.buf.code_action, { desc = "import [m]issing [r]eference" })
