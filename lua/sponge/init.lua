@@ -1,6 +1,7 @@
-require("sponge.packer")
 require("sponge.set")
 require("sponge.remap")
+-- require("sponge.packer")
+require("sponge.lazy")
 
 local augroup = vim.api.nvim_create_augroup
 local ElSpongeGroup = augroup('sponge', {})
