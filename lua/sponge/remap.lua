@@ -11,13 +11,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move 1/2 up the page and cente
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end, { desc = "start [v]im [w]ith [m]e" })
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end, { desc = "[s]top [v]im [w]ith [m]e" })
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -42,7 +35,7 @@ vim.keymap.set("v", "<leader>s", [[hy:%s/<C-r>/<C-r>/gc<left><left><left>]], { d
 vim.keymap.set("n", "<leader>s", [[hy:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], { desc = "[s]earch buffer" })
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "chmod  e[x]ecutable add" })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/AppData/Local/nvim/lua/sponge/packer.lua<CR>", { desc = "Edit the packer extensions file" });
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/AppData/Local/nvim/lua/sponge/init.lua<CR>", { desc = "Edit the packer extensions file" });
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
