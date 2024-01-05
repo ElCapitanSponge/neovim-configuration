@@ -8,5 +8,4 @@ return {
             })
         end
     },
-    "theprimeagen/vim-with-me"
 }
