@@ -1,3 +1,5 @@
+return {}
+--[[
 return {
     {
         "MunifTanjim/eslint.nvim",
@@ -32,3 +34,4 @@ return {
         end
     }
 }
+--]]

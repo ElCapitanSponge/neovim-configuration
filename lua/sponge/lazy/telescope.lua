@@ -18,6 +18,7 @@ return {
                         base_dirs = {
                             '~/AppData/Local/',
                             '~/Documents/sources/',
+                            '~/personal/',
                         }
                     }
                 }
